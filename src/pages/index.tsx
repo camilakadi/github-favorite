@@ -1,10 +1,15 @@
+import EmptyStatus from "@/components/EmptyStatus/EmptyStatus";
 import Header from "@/components/Header/Header";
+import NotFindStatus from "@/components/NotFindStatus/NotFindStatus";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <main></main>
+      <main className="h-screen">
+        <EmptyStatus />
+        <NotFindStatus />
+      </main>
     </>
   );
 };
