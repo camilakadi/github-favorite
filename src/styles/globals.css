@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --white: #ffffff;
+
+  --primaryColorLight: #d4edee;
+  --primaryColor: #32c0c6;
+  --primaryColorDark: #329599;
+
+  --placeholderColor: #8c8c8c;
+
+  --grayNeutralColor: #616161;
+  --grayDarkColor: #4e4e4e;
+
+  --whiteBackgroundLightColor: #ffffff;
+  --whiteBackgroundMatteColor: #f3f3f5;
+  --borderLineColor: #e3e6e9;
+
+  --successColor: #5cb85c;
+  --warningColor: #ffb22b;
+  --dangerColor: #fc4b6c;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: var(--grayNeutralColor);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+h1 {
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--grayNeutralColor);
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--grayNeutralColor);
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--grayNeutralColor);
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grayNeutralColor);
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--grayNeutralColor);
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--grayDarkColor);
+}
+
+/*strong {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--grayDarkColor);
+}*/
+
+small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--placehouderColor);
+}
+
+/*span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--grayNeutralColor);
+}*/

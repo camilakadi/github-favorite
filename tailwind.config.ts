@@ -8,10 +8,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "primary-color-light": "var(--primaryColorLight)",
+        "primary-color": "var(--primaryColor)",
+        "primary-color-dark": "var(--primaryColorDark)",
+        "placeholder-color": "var(--placeholderColor)",
+        "gray-neutral-color": "var(--grayNeutralColor)",
+        "gray-dark-color": "var(--grayDarkColor)",
+        "white-background-light-color": "var(--whiteBackgroundLightColor)",
+        "white-background-matte-color": "var(--whiteBackgroundMatteColor)",
+        "border-line-color": "var(--borderLineColor)",
+        "success-color": "var(--successColor)",
+        "warning-color": "var(--warningColor)",
+        "danger-color": "var(--dangerColor)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },

@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Teste técnico - Front end - Pleno - Casar.com
 
-## Getting Started
+# Lista de repositórios do GitHub
 
-First, run the development server:
+## Descrição
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Nesse projeto você deverá desenvolver um site simples em que seja possível acessar a página de um usuário e visualizar seus repositórios públicos, além de poder favoritar/remover repositórios dos favoritos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Requisitos
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [ ] Uma barra de pesquisa para procurar um usuário
+- [ ] Um feedback caso o usuário não seja encontrado
+- [ ] Uma página do usuário, mostrando suas informações e sua lista de repositórios
+- [ ] **NÃO OBRIGATÓRIO** A lista de repositórios deverá conter uma paginação com rolagem infinita, ou seja, mais repositórios serão carregados conforme o usuário rola a página para baixo até que não haja mais repositórios (estilo Facebook, Instagram, Twitter, etc.)
+- [ ] Possibilidade de favoritar e remover repositórios dos favoritos (utilizar algum gerenciador de estado)
+- [ ] Listar repositórios favoritos
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Obrigatório
 
-## Learn More
+- Utilização de um framework/lib dentre esses: (Vue 3, Nuxt 3, React ou Next)
+- Typescript
+- Responsividade
+- Testes unitários (Jest ou Vitest), o máximo de cobertura que conseguir, mas no mínimo 1 unidade de teste, por exemplo: (Listagem de repositórios)
+- Clean code
 
-To learn more about Next.js, take a look at the following resources:
+**Sinta-se livre para adicionar qualquer outra tecnologia, desde que utilize as tecnologias obrigatórias.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Diferenciais
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Tailwindcss
+- Commits padronizados
 
-## Deploy on Vercel
+## Layout
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Desenvolver o site baseado nesse [protótipo](https://www.figma.com/file/NPsgIQuNZEv46Jy9u1d90E/Processo-Seletivo?node-id=0%3A1).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Informações úteis
+
+#### Sobre a API do GitHub
+
+A API do GitHub requer uma autenticação. Você deverá gerar um token de acesso pessoal no seu GitHub e utilizá-lo no projeto.
+Caso não queira deixar o seu token visível em seu repositório, disponibilize um guia em seu **README** sobre onde substituir o token.
+Para mais detalhes sobre como gerar um token, acesse o [guia de autenticação do GitHub](https://docs.github.com/pt/rest/authentication/authenticating-to-the-rest-api?apiVersion=2022-11-28).
+
+## Sobre a entrega
+
+- Clone esse repositório (ou copie o README)
+- Desenvolva seu projeto atualizando seu repositório
+- Envie o link do seu repositório para **tech@casar.com**
+  - Título do e-mail: Teste técnico - {Seu nome completo}
+  - Corpo do e-mail: Link do repositório
+  - Opcional: Cover letter
+
+## Links
+
+[Documentação da API do GitHub](https://docs.github.com/pt/rest?apiVersion=2022-11-28)
