@@ -1,14 +1,12 @@
-import EmptyStatus from "@/components/EmptyStatus/EmptyStatus";
+import FindStatus from "@/components/FindStatus/FindStatus";
 import Header from "@/components/Header/Header";
-import NotFindStatus from "@/components/NotFindStatus/NotFindStatus";
 
 const Home = () => {
   return (
     <>
       <Header />
       <main className="h-screen">
-        <EmptyStatus />
-        <NotFindStatus />
+        <FindStatus />
       </main>
     </>
   );
