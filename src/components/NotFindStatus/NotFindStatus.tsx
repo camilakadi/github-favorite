@@ -1,10 +1,14 @@
 import Image from "next/image";
 
-const NotFindStatus = () => {
+interface NotFindProps {
+  search: any;
+}
+
+const NotFindStatus: React.FC<NotFindProps> = ({ search }) => {
   return (
     <div>
       <div className="m-auto text-center mt-[168px]">
-        <h1 className="text-primary-color">“MHshdahsudl”</h1>
+        <h1 className="text-primary-color">“{search}”</h1>
         <h1>Nenhum usuário encontrado</h1>
         <h5>Verifique se a escrita está correta ou tente novamente</h5>
         <Image

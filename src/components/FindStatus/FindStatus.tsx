@@ -1,19 +1,16 @@
+//import { useUser } from "../../contexts/UserContext";
 import Repository from "../Repository/Repository";
+import User from "../User/User";
 
-const FindStatus = () => {
+interface FindStatusProps {
+  user: any;
+}
+
+const FindStatus: React.FC<FindStatusProps> = ({ user }) => {
   return (
     <div className="grid lg:grid-cols-3 p-6 gap-12">
       <section className="lg:col-span-1 col-span-2 border border-border-line-color rounded-[4px] py-10 px-6 text-center xs:w-full">
-        <div className="w-[200px] h-[200px] bg-black rounded-full m-auto mb-6"></div>
-        <div>
-          <h1>Nome da pessoa</h1>
-          <p>@banana</p>
-
-          <p className="mt-6">
-            Trabalha com segurança cibernética, experiencia em empresas
-            multinacionais.
-          </p>
-        </div>
+        <User user={user} />
       </section>
 
       <section className="col-span-2">
