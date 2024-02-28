@@ -1,13 +1,14 @@
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { faHeart as solidFaHeart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useUser } from "@/contexts/UserContext";
+import FavoriteButton from "../FavoriteButtom";
 
 interface RepositoryProps {
   repository: any;
 }
 
 const Repository: React.FC<RepositoryProps> = ({ repository }) => {
-  function formatDate(dateString: string): string {
+  const { starredRepositories } = useUser();
+
+  const formatDate = (dateString: string): string => {
     const date = new Date(dateString);
 
     const day = String(date.getDate()).padStart(2, "0");
@@ -29,7 +30,7 @@ const Repository: React.FC<RepositoryProps> = ({ repository }) => {
     const year = date.getFullYear();
 
     return `${day} ${month} ${year}`;
-  }
+  };
 
   const languageColors = (language: "") => {
     const result = (language || "").replace(/\s/g, "-");
@@ -63,18 +64,13 @@ const Repository: React.FC<RepositoryProps> = ({ repository }) => {
         </div>
       </div>
 
-      <div className="flex justify-end order-1 lg:order-none">
-        <button className="border border-primary-color rounded-full w-10 h-10 flex items-center justify-center">
-          <FontAwesomeIcon
-            icon={solidFaHeart}
-            className="text-[18px] text-primary-color w-[18px]"
-          />
-        </button>
-
-        <button className="border border-white-background-matte-color bg-white-background-matte-color rounded-full w-10 h-10 flex items-center justify-center">
-          <FontAwesomeIcon icon={faHeart} className="text-[18px] w-[18px]" />
-        </button>
-      </div>
+      <FavoriteButton
+        isStarred={starredRepositories.some(
+          (starredRepository) => starredRepository.id === repository.id
+        )}
+        owner={repository.ownerName}
+        repository={repository.name}
+      />
     </div>
   );
 };
