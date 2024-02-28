@@ -10,7 +10,7 @@ interface FindStatusProps {
 const FindStatus: React.FC<FindStatusProps> = ({ user, repositories }) => {
   return (
     <div className="grid lg:grid-cols-3 p-6 gap-12">
-      <section className="lg:col-span-1 col-span-2 border border-border-line-color rounded-[4px] py-10 px-6 text-center xs:w-full">
+      <section className="lg:col-span-1 col-span-2 border border-border-line-color rounded-[4px] py-10 px-6 text-center xs:w-full h-fit">
         <User user={user} />
       </section>
 
