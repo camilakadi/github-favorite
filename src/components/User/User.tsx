@@ -19,7 +19,7 @@ const User: React.FC<UserProps> = ({ user }) => {
       </div>
       <div>
         <h1>{user.name}</h1>
-        <p>{user.login}</p>
+        <p>@{user.login}</p>
 
         <p className="mt-6">{user.bio}</p>
       </div>

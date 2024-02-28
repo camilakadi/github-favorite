@@ -6,11 +6,11 @@ import NotFindStatus from "../NotFindStatus/NotFindStatus";
 
 const HomePage = () => {
   const { search } = useSearch();
-  const { user, notFound } = useUser();
+  const { user, notFound, repositories } = useUser();
 
   return (
     <>
-      {user && <FindStatus user={user} />}
+      {user && <FindStatus user={user} repositories={repositories} />}
 
       {!user && (
         <>

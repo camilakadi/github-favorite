@@ -31,12 +31,6 @@ body {
   color: var(--grayNeutralColor);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 h1 {
   font-size: 21px;
   font-weight: 600;
