@@ -1,5 +1,5 @@
 import { useUser } from "@/contexts/UserContext";
-import FavoriteButton from "../FavoriteButtom";
+import FavoriteButton from "./FavoriteButton";
 
 interface RepositoryProps {
   repository: any;

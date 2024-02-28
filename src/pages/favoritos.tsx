@@ -1,5 +1,5 @@
-import Header from "@/components/Header/Header";
-import Repository from "@/components/Repository/Repository";
+import Header from "@/components/Header";
+import Repository from "@/components/Repository";
 
 const FavoritesPage = () => {
   return (

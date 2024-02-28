@@ -1,6 +1,6 @@
 import { IRepository } from "@/types/Repository";
-import Repository from "../Repository/Repository";
-import User from "../User/User";
+import Repository from "./Repository";
+import User from "./User";
 
 interface FindStatusProps {
   user: any;

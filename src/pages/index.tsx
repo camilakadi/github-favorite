@@ -1,5 +1,5 @@
-import Header from "@/components/Header/Header";
-import HomePage from "@/components/HomePage/HomePage";
+import Header from "@/components/Header";
+import HomePage from "@/components/HomePage";
 import { OctokitProvider } from "@/contexts/OctokitContext";
 import { SearchProvider } from "@/contexts/SearchContext";
 import { UserProvider } from "@/contexts/UserContext";

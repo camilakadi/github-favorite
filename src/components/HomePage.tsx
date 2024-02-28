@@ -1,8 +1,8 @@
 import { useSearch } from "@/contexts/SearchContext";
 import { useUser } from "@/contexts/UserContext";
-import EmptyStatus from "../EmptyStatus/EmptyStatus";
-import FindStatus from "../FindStatus/FindStatus";
-import NotFindStatus from "../NotFindStatus/NotFindStatus";
+import EmptyStatus from "./EmptyStatus";
+import FindStatus from "./FindStatus";
+import NotFindStatus from "./NotFindStatus";
 
 const HomePage = () => {
   const { search } = useSearch();

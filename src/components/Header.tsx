@@ -1,6 +1,6 @@
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Search from "../Search/Search";
+import Search from "./Search";
 
 const Header = () => {
   return (
