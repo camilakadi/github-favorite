@@ -1,7 +1,10 @@
 import Header from "@/components/Header";
 import Repository from "@/components/Repository";
+import { useUser } from "@/contexts/UserContext";
 
 const FavoritesPage = () => {
+  const { starredRepositories } = useUser();
+
   return (
     <>
       <Header />
@@ -10,7 +13,10 @@ const FavoritesPage = () => {
           <h1 className="text-primary-color mb-6 text-center">
             Meus favoritos
           </h1>
-          <Repository />
+
+          {starredRepositories.map((starred) => (
+            <Repository key={starred.id} repository={starred} />
+          ))}
         </div>
       </main>
     </>
