@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-interface NotFindProps {
+interface NotFoundProps {
   search: any;
 }
 
-const NotFindStatus: React.FC<NotFindProps> = ({ search }) => {
+const NotFoundStatus: React.FC<NotFoundProps> = ({ search }) => {
   return (
     <div>
       <div className="m-auto text-center mt-[168px]">
@@ -24,4 +24,4 @@ const NotFindStatus: React.FC<NotFindProps> = ({ search }) => {
   );
 };
 
-export default NotFindStatus;
+export default NotFoundStatus;
