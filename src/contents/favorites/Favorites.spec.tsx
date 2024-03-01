@@ -1,13 +1,14 @@
 import { useUser } from '@/contexts/UserContext';
+import FavoritesPage from '@/pages/favoritos';
 import { render, screen } from '@testing-library/react';
-import Favorites from './favorites';
+import Favorites from './Favorites';
 
-jest.mock('@/src/components/Repository', () => ({
+jest.mock('@/src/components/repository/Repository', () => ({
   __esModule: true,
   default: () => <div data-testid="repository">Repository</div>,
 }));
 
-jest.mock('@/src/content/header/Header', () => ({
+jest.mock('@/src/contents/header/Header', () => ({
   __esModule: true,
   default: () => <div data-testid="header">Header</div>,
 }));
@@ -28,7 +29,7 @@ describe('Favorites', () => {
   });
 
   it('renders the header', () => {
-    render(<Favorites />);
+    render(<FavoritesPage />);
 
     const header = screen.getByTestId('header');
     expect(header).toBeInTheDocument();

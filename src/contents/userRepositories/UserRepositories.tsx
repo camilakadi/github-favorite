@@ -1,8 +1,8 @@
-import Repository from '@/components/Repository';
-import User from '@/components/User';
-import EmptyStatus from '@/content/emptyStatus/EmptyStatus';
-import Header from '@/content/header/Header';
-import NotFoundStatus from '@/content/notFoundStatus/NotFoundStatus';
+import Repository from '@/components/repository/Repository';
+import User from '@/components/user/User';
+import EmptyStatus from '@/contents/emptyStatus/EmptyStatus';
+import Header from '@/contents/header/Header';
+import NotFoundStatus from '@/contents/notFoundStatus/NotFoundStatus';
 import { useSearch } from '@/contexts/SearchContext';
 import { useUser } from '@/contexts/UserContext';
 

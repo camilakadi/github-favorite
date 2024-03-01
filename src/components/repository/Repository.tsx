@@ -1,6 +1,6 @@
 import { useUser } from '@/contexts/UserContext';
 import { IRepository } from '@/types/Repository';
-import FavoriteButton from './FavoriteButton';
+import FavoriteButton from '../favoriteButton/FavoriteButton';
 
 interface RepositoryProps {
   repository: IRepository;

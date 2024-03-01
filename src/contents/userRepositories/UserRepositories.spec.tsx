@@ -12,27 +12,27 @@ jest.mock('@/src/contexts/UserContext', () => ({
   useUser: jest.fn(),
 }));
 
-jest.mock('@/src/components/Repository', () => ({
+jest.mock('@/src/components/repository/Repository', () => ({
   __esModule: true,
   default: () => <div data-testid="repository">Repository</div>,
 }));
 
-jest.mock('@/src/content/emptyStatus/EmptyStatus', () => ({
+jest.mock('@/src/contents/emptyStatus/EmptyStatus', () => ({
   __esModule: true,
   default: () => <div data-testid="empty-status">EmptyStatus</div>,
 }));
 
-jest.mock('@/src/content/header/Header', () => ({
+jest.mock('@/src/contents/header/Header', () => ({
   __esModule: true,
   default: () => <div data-testid="header">Header</div>,
 }));
 
-jest.mock('@/src/content/notFoundStatus/NotFoundStatus', () => ({
+jest.mock('@/src/contents/notFoundStatus/NotFoundStatus', () => ({
   __esModule: true,
   default: () => <div data-testid="not-found-status">NotFoundStatus</div>,
 }));
 
-jest.mock('@/src/components/User', () => ({
+jest.mock('@/src/components/user/User', () => ({
   __esModule: true,
   default: () => <div data-testid="user">User</div>,
 }));

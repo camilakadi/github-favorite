@@ -8,7 +8,7 @@ jest.mock('@/src/contexts/UserContext', () => ({
   }),
 }));
 
-jest.mock('./FavoriteButton', () => ({
+jest.mock('../favoriteButton/FavoriteButton', () => ({
   __esModule: true,
   default: () => <button data-testid="favorite">Favorite</button>,
 }));

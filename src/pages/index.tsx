@@ -1,4 +1,4 @@
-import UserRepositories from '@/content/userRepositories/UserRepositories';
+import UserRepositories from '@/contents/userRepositories/UserRepositories';
 
 const Home = () => <UserRepositories />;
 

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Header from './Header';
 
 jest.mock('next/router');
-jest.mock('@/src/components/Search', () => ({
+jest.mock('@/src/components/search/Search', () => ({
   __esModule: true,
   default: () => <div data-testid="search-component">Search</div>,
 }));
@@ -32,7 +32,7 @@ describe('Header', () => {
 
   it('should render the "Buscar" button when route is "/favoritos"', () => {
     (useRouter as jest.Mock).mockReturnValue({
-      pathname: '/favorites',
+      pathname: '/favoritos',
       push: jest.fn(),
     });
 
@@ -46,14 +46,14 @@ describe('Header', () => {
     render(<Header />);
 
     const favoritesButton = screen.getByTestId('favorites-link');
-    expect(favoritesButton).toHaveAttribute('href', '/favorites');
+    expect(favoritesButton).toHaveAttribute('href', '/favoritos');
   });
 
   it('should navigate to the search page when clicking on the "Buscar" button', () => {
     const pushMock = jest.fn();
 
     (useRouter as jest.Mock).mockReturnValue({
-      pathname: '/favorites',
+      pathname: '/favoritos',
       push: pushMock,
     });
 

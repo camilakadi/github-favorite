@@ -1,5 +1,5 @@
-import Repository from '@/components/Repository';
-import Header from '@/content/header/Header';
+import Repository from '@/components/repository/Repository';
+import Header from '@/contents/header/Header';
 import { useUser } from '@/contexts/UserContext';
 
 const Favorites = () => {
