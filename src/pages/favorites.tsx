@@ -1,4 +1,4 @@
-import Favorites from '@/content/favorites/favorites';
+import Favorites from '@/content/favorites/Favorites';
 
 const FavoritesPage = () => <Favorites />;
 

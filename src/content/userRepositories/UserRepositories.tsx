@@ -6,7 +6,7 @@ import NotFoundStatus from '@/content/notFoundStatus/NotFoundStatus';
 import { useSearch } from '@/contexts/SearchContext';
 import { useUser } from '@/contexts/UserContext';
 
-const Repositories = () => {
+const UserRepositories = () => {
   const { search } = useSearch();
   const { user, notFound, repositories } = useUser();
 
@@ -41,4 +41,4 @@ const Repositories = () => {
   );
 };
 
-export default Repositories;
+export default UserRepositories;

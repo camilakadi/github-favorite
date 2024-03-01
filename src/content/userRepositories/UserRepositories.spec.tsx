@@ -2,7 +2,7 @@ import { useSearch } from '@/contexts/SearchContext';
 import { useUser } from '@/contexts/UserContext';
 import { IUser } from '@/types/User';
 import { render, screen } from '@testing-library/react';
-import Repositories from './repositories';
+import UserRepositories from './UserRepositories';
 
 jest.mock('@/src/contexts/SearchContext', () => ({
   useSearch: jest.fn().mockReturnValue({ search: '' }),
@@ -49,7 +49,7 @@ describe('Repositories', () => {
   it('should render the header', () => {
     (useUser as jest.Mock).mockReturnValue({ user: null, notFound: false, repositories: [] });
 
-    render(<Repositories />);
+    render(<UserRepositories />);
 
     const header = screen.getByTestId('header');
     expect(header).toBeInTheDocument();
@@ -58,7 +58,7 @@ describe('Repositories', () => {
   it('should render the user component', () => {
     (useUser as jest.Mock).mockReturnValue({ user: userMock, notFound: false, repositories: [] });
 
-    render(<Repositories />);
+    render(<UserRepositories />);
 
     const user = screen.getByTestId('user');
     expect(user).toBeInTheDocument();
@@ -71,7 +71,7 @@ describe('Repositories', () => {
       repositories: [{ id: 1, name: 'repository' }],
     });
 
-    render(<Repositories />);
+    render(<UserRepositories />);
 
     const repository = screen.getByTestId('repository');
     expect(repository).toBeInTheDocument();
@@ -80,7 +80,7 @@ describe('Repositories', () => {
   it('should render the empty status', () => {
     (useUser as jest.Mock).mockReturnValue({ user: null, notFound: false, repositories: [] });
 
-    render(<Repositories />);
+    render(<UserRepositories />);
 
     const emptyStatus = screen.getByTestId('empty-status');
     expect(emptyStatus).toBeInTheDocument();
@@ -90,7 +90,7 @@ describe('Repositories', () => {
     (useSearch as jest.Mock).mockReturnValue({ search: 'search' });
     (useUser as jest.Mock).mockReturnValue({ user: null, notFound: true, repositories: [] });
 
-    render(<Repositories />);
+    render(<UserRepositories />);
 
     const notFoundStatus = screen.getByTestId('not-found-status');
     expect(notFoundStatus).toBeInTheDocument();
