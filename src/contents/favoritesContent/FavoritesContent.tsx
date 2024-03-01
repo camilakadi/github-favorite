@@ -2,7 +2,7 @@ import Repository from '@/components/repository/Repository';
 import Header from '@/contents/header/Header';
 import { useUser } from '@/contexts/UserContext';
 
-const Favorites = () => {
+const FavoritesContent = () => {
   const { starredRepositories } = useUser();
 
   return (
@@ -21,4 +21,4 @@ const Favorites = () => {
   );
 };
 
-export default Favorites;
+export default FavoritesContent;

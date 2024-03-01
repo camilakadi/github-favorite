@@ -1,5 +1,5 @@
-import Favorites from '@/contents/favorites/Favorites';
+import FavoritesContent from '@/contents/favoritesContent/FavoritesContent';
 
-const FavoritesPage = () => <Favorites />;
+const FavoritesPage = () => <FavoritesContent />;
 
 export default FavoritesPage;

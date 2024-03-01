@@ -2,7 +2,7 @@ import { useSearch } from '@/contexts/SearchContext';
 import { useUser } from '@/contexts/UserContext';
 import { IUser } from '@/types/User';
 import { render, screen } from '@testing-library/react';
-import UserRepositories from './UserRepositories';
+import UserRepositories from './HomeContent';
 
 jest.mock('@/src/contexts/SearchContext', () => ({
   useSearch: jest.fn().mockReturnValue({ search: '' }),

@@ -1,5 +1,5 @@
-import UserRepositories from '@/contents/userRepositories/UserRepositories';
+import HomeContent from '@/contents/homeContent/HomeContent';
 
-const Home = () => <UserRepositories />;
+const Home = () => <HomeContent />;
 
 export default Home;

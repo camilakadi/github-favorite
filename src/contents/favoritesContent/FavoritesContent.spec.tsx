@@ -1,7 +1,7 @@
 import { useUser } from '@/contexts/UserContext';
 import FavoritesPage from '@/pages/favoritos';
 import { render, screen } from '@testing-library/react';
-import Favorites from './Favorites';
+import Favorites from './FavoritesContent';
 
 jest.mock('@/src/components/repository/Repository', () => ({
   __esModule: true,
