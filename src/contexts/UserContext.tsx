@@ -1,22 +1,17 @@
-import { repositoriesMapper } from "@/mappers/repositoriesMapper";
-import { userMapper } from "@/mappers/userMapper";
-import { IRepository } from "@/types/Repository";
-import { IUser } from "@/types/User";
-import React, {
-  PropsWithChildren,
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
-import { useOctokit } from "./OctokitContext";
-import { useSearch } from "./SearchContext";
+import { repositoriesMapper } from '@/mappers/RepositoriesMapper';
+import { userMapper } from '@/mappers/UserMapper';
+import { IRepository } from '@/types/Repository';
+import { IUser } from '@/types/User';
+import React, { PropsWithChildren, createContext, useContext, useEffect, useState } from 'react';
+import { useOctokit } from './OctokitContext';
+import { useSearch } from './SearchContext';
 
 interface UserContextProps {
   user: IUser | null;
   notFound: boolean;
   repositories: IRepository[];
   starredRepositories: IRepository[];
+  setStarredRepositories: React.Dispatch<React.SetStateAction<any[]>>;
 }
 
 const UserContext = createContext<UserContextProps>({
@@ -24,6 +19,7 @@ const UserContext = createContext<UserContextProps>({
   notFound: false,
   repositories: [],
   starredRepositories: [],
+  setStarredRepositories: () => {},
 });
 
 export const UserProvider: React.FC<PropsWithChildren> = ({ children }) => {
@@ -37,14 +33,14 @@ export const UserProvider: React.FC<PropsWithChildren> = ({ children }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const result = await octokit?.request("GET /users/{username}", {
+        const result = await octokit?.request('GET /users/{username}', {
           username: search,
         });
 
         setNotFound(false);
         setUser(userMapper(result?.data));
       } catch (error) {
-        console.error("Erro ao buscar usuário:", error);
+        console.error('Erro ao buscar usuário:', error);
 
         setNotFound(true);
         setUser(null);
@@ -53,13 +49,13 @@ export const UserProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
     const fetchRepositories = async () => {
       try {
-        const result = await octokit?.request("GET /users/{username}/repos", {
+        const result = await octokit?.request('GET /users/{username}/repos', {
           username: search,
         });
 
         setRepositories(repositoriesMapper(result?.data));
       } catch (error) {
-        console.error("Erro ao buscar repositórios:", error);
+        console.error('Erro ao buscar repositórios:', error);
       }
     };
 
@@ -71,13 +67,13 @@ export const UserProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   useEffect(() => {
     const fetchStarredRepositories = async () => {
-      const result = await octokit?.request("GET /user/starred", {
+      const result = await octokit?.request('GET /user/starred', {
         headers: {
-          "X-GitHub-Api-Version": "2022-11-28",
+          'X-GitHub-Api-Version': '2022-11-28',
         },
       });
 
-      setStarredRepositories(result?.data);
+      setStarredRepositories(repositoriesMapper(result?.data) || []);
     };
 
     if (octokit) fetchStarredRepositories();
@@ -85,7 +81,7 @@ export const UserProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
   return (
     <UserContext.Provider
-      value={{ user, notFound, repositories, starredRepositories }}
+      value={{ user, notFound, repositories, starredRepositories, setStarredRepositories }}
     >
       {children}
     </UserContext.Provider>

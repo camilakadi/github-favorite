@@ -1,4 +1,4 @@
-import { IRepository } from "@/types/Repository";
+import { IRepository } from '@/types/Repository';
 
 export const repositoriesMapper = (data: any) => {
   return data.map((repository: any) => {
@@ -9,7 +9,6 @@ export const repositoriesMapper = (data: any) => {
       description: repository.description,
       language: repository.language,
       updated_at: repository.updated_at,
-      starred_url: repository.starred_url,
     } as IRepository;
   });
 };

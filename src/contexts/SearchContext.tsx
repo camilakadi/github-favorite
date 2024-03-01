@@ -1,31 +1,23 @@
-import React, {
-  PropsWithChildren,
-  createContext,
-  useContext,
-  useState,
-} from "react";
+import React, { PropsWithChildren, createContext, useContext, useState } from 'react';
 
 interface SearchContextProps {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
-  resetSearch: () => void;
 }
 
-const SearchContext = createContext<SearchContextProps | undefined>(undefined);
+const SearchContext = createContext<SearchContextProps>({
+  search: '',
+  setSearch: () => {},
+});
 
 export const SearchProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [search, setSearch] = useState("");
-
-  const resetSearch = () => {
-    setSearch("");
-  };
+  const [search, setSearch] = useState('');
 
   return (
     <SearchContext.Provider
       value={{
         search,
         setSearch,
-        resetSearch,
       }}
     >
       {children}
@@ -33,12 +25,4 @@ export const SearchProvider: React.FC<PropsWithChildren> = ({ children }) => {
   );
 };
 
-export const useSearch = () => {
-  const context = useContext(SearchContext);
-
-  if (!context) {
-    throw new Error("useSearch deve ser usado dentro de um SearchProvider");
-  }
-
-  return context;
-};
+export const useSearch = () => useContext(SearchContext);

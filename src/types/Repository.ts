@@ -5,5 +5,4 @@ export interface IRepository {
   description: string;
   language: string;
   updated_at: string;
-  starred_url: string;
 }
