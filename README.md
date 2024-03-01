@@ -1,56 +1,53 @@
 ### Teste técnico - Front end - Pleno - Casar.com
 
-# Lista de repositórios do GitHub
+## Pré-requisitos
 
-## Descrição
+Antes de começar, certifique-se de ter Node.js (versão 20 ou superior) e npm instalados em sua máquina.
 
-Nesse projeto você deverá desenvolver um site simples em que seja possível acessar a página de um usuário e visualizar seus repositórios públicos, além de poder favoritar/remover repositórios dos favoritos.
+## Configuração do token
 
-## Requisitos
+Criar arquivo .env na raiz da aplicação, com o seguinte conteudo:
 
-- [ ] Uma barra de pesquisa para procurar um usuário
-- [ ] Um feedback caso o usuário não seja encontrado
-- [ ] Uma página do usuário, mostrando suas informações e sua lista de repositórios
-- [ ] **NÃO OBRIGATÓRIO** A lista de repositórios deverá conter uma paginação com rolagem infinita, ou seja, mais repositórios serão carregados conforme o usuário rola a página para baixo até que não haja mais repositórios (estilo Facebook, Instagram, Twitter, etc.)
-- [ ] Possibilidade de favoritar e remover repositórios dos favoritos (utilizar algum gerenciador de estado)
-- [ ] Listar repositórios favoritos
+```
+NEXT_PUBLIC_GITHUB_API_KEY={TOKEN}
+```
 
-## Obrigatório
+Substituir {TOKEN} pelo token próprio gerado no GitHub.
 
-- Utilização de um framework/lib dentre esses: (Vue 3, Nuxt 3, React ou Next)
-- Typescript
-- Responsividade
-- Testes unitários (Jest ou Vitest), o máximo de cobertura que conseguir, mas no mínimo 1 unidade de teste, por exemplo: (Listagem de repositórios)
-- Clean code
+## Instalação
 
-**Sinta-se livre para adicionar qualquer outra tecnologia, desde que utilize as tecnologias obrigatórias.**
+1. Clone este repositório para sua máquina local.
+2. Navegue até o diretório do projeto.
+3. Execute o seguinte comando para instalar as dependências:
 
-## Diferenciais
+```bash
+npm install
+```
 
-- Tailwindcss
-- Commits padronizados
+## Desenvolvimento
 
-## Layout
+Para iniciar o servidor de desenvolvimento, utilize o seguinte comando:
 
-Desenvolver o site baseado nesse [protótipo](https://www.figma.com/file/NPsgIQuNZEv46Jy9u1d90E/Processo-Seletivo?node-id=0%3A1).
+```bash
+npm run dev
+```
 
-## Informações úteis
+Isso iniciará o servidor Next.js e você poderá acessar a aplicação em http://localhost:3000.
 
-#### Sobre a API do GitHub
+## Testes
 
-A API do GitHub requer uma autenticação. Você deverá gerar um token de acesso pessoal no seu GitHub e utilizá-lo no projeto.
-Caso não queira deixar o seu token visível em seu repositório, disponibilize um guia em seu **README** sobre onde substituir o token.
-Para mais detalhes sobre como gerar um token, acesse o [guia de autenticação do GitHub](https://docs.github.com/pt/rest/authentication/authenticating-to-the-rest-api?apiVersion=2022-11-28).
+Este projeto utiliza Jest para testes. Para executar os testes, utilize o seguinte comando:
 
-## Sobre a entrega
+```bash
+npm test
+```
 
-- Clone esse repositório (ou copie o README)
-- Desenvolva seu projeto atualizando seu repositório
-- Envie o link do seu repositório para **tech@casar.com**
-  - Título do e-mail: Teste técnico - {Seu nome completo}
-  - Corpo do e-mail: Link do repositório
-  - Opcional: Cover letter
+Se preferir assistir às alterações e executar os testes automaticamente sempre que um arquivo for modificado, execute o seguinte comando:
 
-## Links
+```bash
+npm run test:watch
+```
 
-[Documentação da API do GitHub](https://docs.github.com/pt/rest?apiVersion=2022-11-28)
+## Autor
+
+Camila Kadi Garcia - Desenvolvedora Front-end
